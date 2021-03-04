@@ -67,7 +67,6 @@ public class UserService {
         Optional<User> userFromDb = userRepository.findById(id);
 
 
-//        if (userFromDb.isPresent()) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         if (!userFromDb.isPresent()) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
         userRepository.deleteById(id);
